@@ -1,3 +1,4 @@
+
 ;;; init.el -- my emacs config
 ;;; Commentary:
 ;;; byte-compile-warnings: (not free-vars)
@@ -92,18 +93,18 @@
 
 ;; magit
 (use-package init-magit-vig
-             :load-path "elisp")
+  :load-path "elisp")
 
 ;; various functions & key bindings
 (use-package init-fnkeys-vig
-             :load-path "elisp")
+  :load-path "elisp")
 
 ;; winner
 (use-package winner
-             :ensure t
-             :defer t
-             :init
-             (winner-mode 1))
+  :ensure t
+  :defer t
+  :init
+  (winner-mode 1))
 
 ;; ace-window
 (use-package ace-window
@@ -137,12 +138,12 @@
     ))
 
 (use-package nyan-mode
-             :if window-system
-             :ensure t
-             :config
-             (nyan-mode)
-             (nyan-start-animation)
-             )
+  :if window-system
+  :ensure t
+  :config
+  (nyan-mode)
+  (nyan-start-animation)
+  )
 
 (use-package powerline
   :ensure t
@@ -190,10 +191,10 @@
 
 
 (use-package dark-mint-theme
-             :ensure t
-             )
+  :ensure t
+  )
 
 ;; (load-theme 'dark-mint t)
 
 (setq prelude-theme 'dark-mint)
-(provide 'init-local)
+(provide 'init-personal)
