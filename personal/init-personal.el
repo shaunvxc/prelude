@@ -177,17 +177,6 @@
   :ensure t
   :bind ( ("<C-return>" . er/expand-region)))
 
-;; (require 'key-chord)
-;; (setq key-chord-two-keys-delay .015
-;;       key-chord-one-key-delay .020)
-
-;; (key-chord-define-global "xb" 'helm-buffers-list)
-
-;; (key-chord-mode +1)
-
-;; (use-package key-chord                    ; key-chord
-;;   :ensure t
-;;   b  :bind ( ("" . helm-buffers-list)))
 
 
 (use-package dark-mint-theme
@@ -197,4 +186,12 @@
 ;; (load-theme 'dark-mint t)
 
 (setq prelude-theme 'dark-mint)
+
+(require 'prelude-helm-everywhere)
+(require 'prelude-key-chord)
+(require 'key-chord)
+
+(key-chord-define-global "FF" 'projectile-find-file)
+(key-chord-define-global "BB" 'helm-mini)
+
 (provide 'init-personal)
