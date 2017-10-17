@@ -25,3 +25,5 @@ tramp
 .emacs.desktop.lock
 network-security.data
 helm-adaptive-history
+.historian
+.session
