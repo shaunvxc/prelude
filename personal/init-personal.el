@@ -192,6 +192,8 @@
 (require 'key-chord)
 
 (key-chord-define-global "FF" 'projectile-find-file)
-(key-chord-define-global "BB" 'helm-mini)
+(key-chord-define-global "bb" 'helm-mini)
 
+;; turn on smartparens strict mode globally
+(smartparens-global-strict-mode 1)
 (provide 'init-personal)
