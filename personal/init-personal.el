@@ -1,4 +1,3 @@
-
 ;;; init.el -- my emacs config
 ;;; Commentary:
 ;;; byte-compile-warnings: (not free-vars)
@@ -37,7 +36,8 @@
 (column-number-mode t)
 (delete-selection-mode 1)
 (show-paren-mode t)
-(global-linum-mode 1)
+;; (global-linum-mode 1)
+
 (tool-bar-mode -1)
 
 (when (eq system-type 'darwin)
@@ -183,9 +183,20 @@
   :ensure t
   )
 
+(use-package linum-relative
+  :ensure t
+  :config
+  (linum-on))
+
 ;; (load-theme 'dark-mint t)
 
+(disable-theme 'zenburn)
 (setq prelude-theme 'dark-mint)
+
+(set-face-background 'hl-line "#3e4446") ;make cursor line work like I want it to!
+(set-face-foreground 'highlight nil)
+
+(linum-relative-global-mode)            ;; turn put relative linum mode on
 
 (require 'prelude-helm-everywhere)
 (require 'prelude-key-chord)
@@ -194,6 +205,7 @@
 (key-chord-define-global "FF" 'projectile-find-file)
 (key-chord-define-global "bb" 'helm-mini)
 
-;; turn on smartparens strict mode globally
-(smartparens-global-strict-mode 1)
+(setq prelude-flyspell nil)
+(setq prelude-whitespace nil)
+
 (provide 'init-personal)
