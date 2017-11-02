@@ -202,10 +202,18 @@
 (require 'prelude-key-chord)
 (require 'key-chord)
 
-(key-chord-define-global "FF" 'projectile-find-file)
-(key-chord-define-global "bb" 'helm-mini)
+(key-chord-define-global "pf" 'projectile-find-file)
+(key-chord-define-global ";b" 'helm-mini)
+(key-chord-define-global "pb" 'helm-projectile-switch-to-buffer)
 
 (setq prelude-flyspell nil)
 (setq prelude-whitespace nil)
+
+(defun run-python-once ()
+  (remove-hook 'python-mode-hook 'run-python-once)
+  (run-python (python-shell-parse-command)))
+
+(add-hook 'python-mode-hook 'run-python-once)
+
 
 (provide 'init-personal)

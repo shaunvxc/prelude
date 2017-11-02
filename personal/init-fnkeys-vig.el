@@ -176,5 +176,6 @@
 (global-set-key (kbd "M-g M-g") 'goto-line-center)
 
 (global-set-key (kbd "C-x o") 'other-window)
+(global-set-key (kbd "C-o") 'crux-smart-open-line)
 (provide 'init-fnkeys-vig)
 ;;; init-fnkeys-vig.el ends here
