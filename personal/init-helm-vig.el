@@ -76,7 +76,6 @@
          ("C-x b" . helm-buffers-list)
          ("M-y" . helm-show-kill-ring)
          ("M-x" . helm-M-x)
-         ("C-0" . my-helm-grep-do-git-grep)
          ("C-x c o" . helm-occur)
          ("C-x c s" . helm-swoop)
          ("C-x f" . helm-for-files)
