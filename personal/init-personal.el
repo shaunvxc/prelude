@@ -21,6 +21,10 @@
 (package-initialize)
 (setq org-agenda-files '("~/org/tasks.org" "~/org/life.org"))
 
+(require 'ein)
+(require 'ein-loaddefs)
+(require 'ein-notebook)
+(require 'ein-subpackages)
 
 (setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
