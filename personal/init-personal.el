@@ -219,5 +219,16 @@
 
 (add-hook 'python-mode-hook 'run-python-once)
 
+(find-file "~/org/notes.org")
+(find-file "~/org/tasks.org")
+
+(require 'virtualenvwrapper)
+(venv-initialize-interactive-shells) ;; if you want interactive shell support
+(venv-initialize-eshell) ;; if you want eshell support
+(setq venv-location "~/.virtualenvs/")
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
 
 (provide 'init-personal)
