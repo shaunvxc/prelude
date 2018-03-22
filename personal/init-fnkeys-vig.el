@@ -51,17 +51,22 @@
   (delete-trailing-whitespace)
   (delete-trailing-blank-lines))
 
-(defun squeeze-file ()
-  "Deletes all stray whitespace from the current buffer."
-  (interactive)
-  (delete-trailing-whitespace)
-  (delete-trailing-blank-lines))
+
 
 (defun save-and-squeeze ()
   "Deletes all stray whitespace from the current buffer."
   (interactive)
   (squeeze-file)
   (save-buffer))
+
+(defun spv-find-definitions()
+  (interactive)
+  (anaconda-mode-find-definitions)
+  (recenter-top-bottom))
+
+
+(add-hook 'prelude-python-mode-hook 'set-my-keys)
+(eval-after-load "anaconda-mode-hook" (define-key anaconda-mode-map (kbd "M-.") 'spv-find-definitions))
 
 ;; remove any whitespace at the ends of lines
 (defun delete-trailing-blank-lines ()
