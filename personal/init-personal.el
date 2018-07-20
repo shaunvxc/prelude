@@ -87,17 +87,9 @@
 
 (setq company-global-modes '(not org-mode term-mode magit-mode Magit))
 (setq org-agenda-include-diary t)
+(setq org-agenda-window-setup '(only-window))
 
 (global-set-key (kbd "C-;") 'other-frame)
-
-;; helm
-(use-package init-helm-vig
-  :load-path "elisp"
-  )
-
-;; magit
-(use-package init-magit-vig
-  :load-path "elisp")
 
 ;; various functions & key bindings
 (use-package init-fnkeys-vig
@@ -206,6 +198,7 @@
 (require 'prelude-key-chord)
 (require 'key-chord)
 
+
 (key-chord-define-global "pf" 'projectile-find-file)
 (key-chord-define-global ";b" 'helm-mini)
 (key-chord-define-global "pb" 'helm-projectile-switch-to-buffer)
@@ -219,8 +212,10 @@
 
 (add-hook 'python-mode-hook 'run-python-once)
 
-(find-file "~/org/notes.org")
-(find-file "~/org/tasks.org")
+(setq org-directory "~/org/")
+;; (setq org-default-notes-file (expand-file-name "athanor_tasks.org" org-directory))
+
+(find-file "~/org/athanor_tasks.org")
 
 (require 'virtualenvwrapper)
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
