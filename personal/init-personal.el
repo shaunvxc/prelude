@@ -19,7 +19,15 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
-(setq org-agenda-files '("~/org/tasks.org" "~/org/life.org"))
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/athanor_tasks.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")))
+
+(setq org-agenda-files '("~/org/athanor_tasks.org"))
+
 
 (require 'ein)
 (require 'ein-loaddefs)
