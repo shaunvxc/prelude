@@ -62,11 +62,13 @@
 (defun spv-find-definitions()
   (interactive)
   (anaconda-mode-find-definitions)
-  (recenter-top-bottom))
+  ;; (recenter-top-bottom)
+  (recenter)
+  (recenter-top-bottom)
+ )
 
-
-(add-hook 'prelude-python-mode-hook 'set-my-keys)
-(eval-after-load "anaconda-mode-hook" (define-key anaconda-mode-map (kbd "M-.") 'spv-find-definitions))
+;; overrides anaconda's default keymap
+;; (eval-after-load "anaconda-mode-hook" (define-key anaconda-mode-map (kbd "M-.") 'spv-find-definitions))
 
 ;; remove any whitespace at the ends of lines
 (defun delete-trailing-blank-lines ()
