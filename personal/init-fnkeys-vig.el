@@ -85,7 +85,6 @@
               (delete-char trailnewlines)))))))
 
 
-
 ;; when jumping to a new line, automatically recenter the buffer to line being jumped to
 (defun goto-line-center (arg line)
   "When running `goto-line ARG LINE`, also call `recenter-top-bottom`."
@@ -120,7 +119,7 @@
 (global-set-key (kbd "C-t") 'my-transpose-chars)
 
 ;; squeeze file when saving
-(global-set-key (kbd "C-x s") 'save-and-squeeze)
+(global-set-key (kbd "C-x C-s") 'save-and-squeeze)
 
 ;;; maps the key-binding for the function that removes all white space
 (global-set-key [(ctrl x) (w)] 'squeeze-file)
