@@ -99,6 +99,9 @@
 
 (global-set-key (kbd "C-;") 'other-frame)
 
+;; hide files i don't care about from dired
+(dired-omit-mode 1)
+
 ;; various functions & key bindings
 (use-package init-fnkeys-vig
   :load-path "elisp")
