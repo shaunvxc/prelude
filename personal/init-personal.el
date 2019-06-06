@@ -29,10 +29,10 @@
 (setq org-agenda-files '("~/org/athanor_tasks.org"))
 
 
-(require 'ein)
-(require 'ein-loaddefs)
-(require 'ein-notebook)
-(require 'ein-subpackages)
+;; (require 'ein)
+;; (require 'ein-loaddefs)
+;; (require 'ein-notebook)
+;; (require 'ein-subpackages)
 
 (setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
@@ -199,6 +199,7 @@
 
 (disable-theme 'zenburn)
 (setq prelude-theme 'dark-mint)
+(load-theme ')
 
 (set-face-background 'hl-line "#3e4446") ;make cursor line work like I want it to!
 (set-face-foreground 'highlight nil)
@@ -228,10 +229,10 @@
 
 (find-file "~/org/athanor_tasks.org")
 
-(require 'virtualenvwrapper)
-(venv-initialize-interactive-shells) ;; if you want interactive shell support
-(venv-initialize-eshell) ;; if you want eshell support
-(setq venv-location "~/.virtualenvs/")
+;; (require 'virtualenvwrapper)
+;; (venv-initialize-interactive-shells) ;; if you want interactive shell support
+;; (venv-initialize-eshell) ;; if you want eshell support
+;; (setq venv-location "~/.virtualenvs/")
 
 (org-babel-do-load-languages
  'org-babel-load-languages
