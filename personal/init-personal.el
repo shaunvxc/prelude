@@ -199,7 +199,7 @@
 
 (disable-theme 'zenburn)
 (setq prelude-theme 'dark-mint)
-(load-theme ')
+
 
 (set-face-background 'hl-line "#3e4446") ;make cursor line work like I want it to!
 (set-face-foreground 'highlight nil)
