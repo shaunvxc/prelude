@@ -170,7 +170,7 @@
       )
     )
   :bind ( ("M-." . dumb-jump-go-autosave)
-          ("M-," . dumb-jump-go-back))
+          ("M-," . dumb-jump-back))
   )
 
 
